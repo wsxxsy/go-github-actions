@@ -1,4 +1,4 @@
-name: Build and Test
+name: build
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 jobs:
 
   lint:
-    name: Lint
+    name: lint
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go
@@ -27,7 +27,7 @@ jobs:
           make lint
 
   test:
-    name: Test
+    name: test
     runs-on: ubuntu-latest
     steps:
       - name: Set up Go
@@ -48,7 +48,7 @@ jobs:
           file: ./coverage.txt
 
   build:
-    name: Build
+    name: build
     runs-on: ubuntu-latest
     needs: [lint, test]
     steps:
