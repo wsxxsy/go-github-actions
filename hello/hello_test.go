@@ -8,7 +8,7 @@ func TestGreet(t *testing.T) {
 		want string
 	}{
 		// TODO: Add test cases.
-		{name: "", want: "Hello GitHub Actions"},
+		{name: "", want: "Hello GitHub Actions. github is awesome"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
